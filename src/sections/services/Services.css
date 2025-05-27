@@ -1,0 +1,78 @@
+.services-section {
+  background: linear-gradient(145deg, #0a0a0a, #111);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.services-title {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #D4AF37, #999, #D4AF37);
+  background-size: 300% 300%;
+  animation: glowTitle 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-title span {
+  color: #D4AF37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+@keyframes glowTitle {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.08);
+  transition: all 0.4s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.service-card:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #D4AF37;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2.2rem;
+  }
+}

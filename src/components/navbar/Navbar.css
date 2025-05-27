@@ -1,0 +1,121 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #1A1A1A; /* Coal color */
+  color: #E0E0E0; /* Light text color */
+}
+
+a {
+  text-decoration: none;
+  color: #D4AF37; /* Golden color */
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px;
+  background-color: #000000; /* Black background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-img {
+  height: 40px; /* Adjust logo height as needed */
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: #E0E0E0; /* Light color */
+  font-size: 18px;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #D4AF37; /* Golden color on hover */
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #D4AF37; /* Golden color */
+  transition: all 0.3s ease;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links a {
+    font-size: 24px;
+  }
+}
+
+/* Mobile and tablet screens */
+@media (max-width: 480px) {
+  .logo-img {
+    height: 30px; /* Adjust logo height for smaller screens */
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,14 @@
+.page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.page h2 {
+  font-size: 2rem;
+  color: #003366;
+}
+
+.page p {
+  font-size: 1.2rem;
+  color: #333;
+}
